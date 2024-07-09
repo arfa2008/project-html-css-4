@@ -94,24 +94,12 @@ body {
     padding: 20px;
     justify-content: center;
 }
-/* .room-item:hover{
-    transform: scale(1.02);
-} */
+
 .room-item img {
     max-width: 80%;
     height: auto;
     border-radius: 8px;
 }
-/* .slide-image {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-}
-
-.room-item img:hover .slide-image {
-    transform: translateX(100px); 
-} */
-
 .room-item h1 {
     font-size: 1.5em;
     margin: 10px 0;

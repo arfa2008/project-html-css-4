@@ -80,12 +80,6 @@ body {
     height: auto;
     display: block;
 }
-section#c-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 760px;
-}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
