@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hotel-name {
+    font-size: 34px;
+    color: black;
+    letter-spacing: 8px;
+}
+
+.hotel-subtitle {
+    font-size: 25px;
+    color: black;
+}
+
+.navbar-links {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: black;
+}
+
+.navbar-links a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 2px;
+}
+
+.navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: width .3s;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.hero {
+    display: grid;
+    place-items: center;
+}
+
+.hero-image {
+    max-width: 90%;
+    height: auto;
+    display: block;
+}
+section#c-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 760px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.check-availability {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.check-availability h1 {
+    font-size: 40px;
+    color: #333;
+    width: 80%;
+}
+.check-availability h3{
+    font-size: 20px;
+    color: #333;
+}
+.check-availability p {
+    font-size: 16px;
+    color: #666;
+}
+
+.check-availability a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.check-availability a:hover {
+    text-decoration: underline;
+}
+
+.map iframe {
+    width: 100%;
+    border: 0;
+}
+
+ .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-form h2 {
+    font-size: 43px;
+    font-weight: 500;
+    color: #333;
+}
+.contact-form p {
+    font-size: 16px;
+    color: #666;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.contact-form-1 {
+    min-width: 300px;
+    padding-top: 20px;
+}
+
+.contact-form-1 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-1 input,
+.contact-form-1 textarea {
+    padding: 15px;
+    font-size: 16px;
+}
+
+.contact-form-1 textarea {
+    height: 200px; 
+}
+
+.contact-form-1 button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #0b1648;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 41px;
+    width: 24%;
+}
+.contact-form-1 button:hover{
+    background-color: #1a2142;
+    color: white;
+}
+.carsten {
+    background-color: #000526;
+    height: 35px;
+}
+
+.carsten p {
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.footer {
+    background-color: #1a2142;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6em 0em;
+}
+
+.footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #989daf;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section {
+    grid-column: span 1;
+    display: flex;
+    grid-column: span 1;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-bottom {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+    background-color:#000526;
+}
+.footer-bottom p {
+    color: white;
+}
+.footer-logo {
+    grid-column: span 1;
+    margin: auto;
+}
+.payment-logos {
+    display: flex;
+    flex-direction: row;
+}
+.payment-logos img {
+    width: 180px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+
+

@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dee5d8;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hotel-name {
+    font-size: 34px;
+    color: black;
+    letter-spacing: 8px;
+}
+
+.hotel-subtitle {
+    font-size: 25px;
+    color: black;
+}
+
+.navbar-links {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: black;
+}
+
+.navbar-links a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 2px;
+}
+
+.navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: width .3s;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.parallax-linear h1{
+    font-size: 120px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(255,255,255,.4);
+}
+.parallax-1{
+    background: url(images/blog1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-2{
+    background: url(images/blog2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-3{
+    background: url(images/blog3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-4{
+    background: url(images/luxury-small-img1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-5{
+    background: url(images/blog5.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-6{
+    background: url(images/blog6.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-linear {
+    padding: 10% 0;
+}
+h2{
+    font-size: 32px;
+    color: #555;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 20px 0 10px;
+}
+p{
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+    line-height: 30px;
+    margin: 0 50px 0px;
+    padding: 20px;
+}
+.carsten {
+    background-color: #000526;
+    height: 35px;
+}
+
+.carsten p {
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.footer {
+    background-color: #1a2142;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6em 0em;
+}
+
+.footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #989daf;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section {
+    grid-column: span 1;
+    display: flex;
+    grid-column: span 1;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-bottom {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#000526;
+}
+.footer-bottom p {
+    color: white;
+}
+.footer-logo {
+    grid-column: span 1;
+    margin: auto;
+}
+.payment-logos {
+    display: flex;
+    flex-direction: row;
+}
+.payment-logos img {
+    width: 180px;
+    height: 30px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+
