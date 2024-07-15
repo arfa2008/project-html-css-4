@@ -929,14 +929,25 @@ button {
         gap: 20px;
         width: auto;
     }
-
+    .contact-1 {
+        margin: 0 auto;
+        padding: 20px;
+        text-align: left;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
     .contact-1 h1 {
         font-size: 20px;
+        margin: 0 auto;
     }
 
     .contact-1 h2,
     .contact-1 h3 {
         font-size: 16px;
+        margin: 0 auto;
     }
 
     .container-4 {
