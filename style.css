@@ -12,6 +12,11 @@ body {
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
@@ -22,6 +27,16 @@ body {
 .navbar-center {
     text-align: center;
     margin-bottom: 10px;
+}
+
+.ham-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.ham-icon input[type="checkbox"] {
+    appearance: none;
 }
 
 .hotel-name {
@@ -70,6 +85,7 @@ body {
     width: 100%;
     transition: width .3s;
 }
+
 .hero {
     display: grid;
     place-items: center;
@@ -109,6 +125,7 @@ body {
     color: black;
     font-weight: 500;
 }
+
 .reservation-form {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -464,8 +481,8 @@ button {
     width: 80%;
     display: flex;
     gap: 10px;
-    padding: 5em;
-    padding: -5px;
+    margin: 0 auto;
+    padding-top: 5em;
 }
 
 .text-left h1 {
@@ -626,7 +643,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(61, 49, 49);
     width: 70%;
     margin: 0 auto;
 }
@@ -637,6 +654,7 @@ button {
     border: none;
     width: 513px;
 }
+
 .subscription-container button {
     padding: 18px -1px;
     font-size: 16px;
@@ -657,7 +675,7 @@ button {
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    /* padding: 30px; */
     gap: 34px;
     align-content: center;
     justify-content: center;
@@ -737,22 +755,571 @@ button {
     padding: 2em;
     background-color: #a06b59;
 }
+
 .footer-bottom p {
     color: white;
 }
+
 .footer-logo {
     grid-column: span 1;
     margin: auto;
 }
+
 .payment-logos {
     display: flex;
     flex-direction: row;
 }
+
 .payment-logos img {
     width: 180px;
     margin: 0 5px;
     vertical-align: middle;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 575px) {
+
+ 
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px 0 10px 10px;
+        justify-content: space-between;
 
 
+    }
+
+    .navbar-center {
+        order: 1;
+    }
+
+    .navbar-links {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .ham-icon {
+        display: block;
+        order: 2;
+    }
+    i.fa-solid.fa-x {
+        display: none;
+    }
+
+    .fa-x,
+    .fa-bars {
+        color: black;
+        font-size: 1.7rem;
+    }
+    .navbar:has(input[type="checkbox"]:checked) .navbar-links {
+        margin-top: 1rem;
+        height: 270px;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .container h1 {
+        font-size: 50px;
+    }
+
+    .container p {
+        font-size: 14px;
+    }
+
+    .reservation-form {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .circle-button {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid-1 img {
+        width: 85%;
+    }
+
+    .container2 h1 {
+        font-size: 40px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .container3 h1 {
+        font-size: 33px;
+    }
+
+    .container3 p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .text-left {
+        flex-direction: column;
+        width: 80%;
+        display: flex;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .offer h3 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .subscription-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8ece7;
+        padding: 40px 60px;
+        border-radius: 8px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .email.box {
+        height: 327px;
+        width: 98%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        /* padding: 30px; */
+        gap: 34px;
+        align-content: center;
+        justify-content: center;
+        border: none;
+    }
+
+    .subscription-container {
+        display: none;
+    }
+
+    .contact-us {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: auto;
+    }
+
+    .contact-1 h1 {
+        font-size: 20px;
+    }
+
+    .contact-1 h2,
+    .contact-1 h3 {
+        font-size: 16px;
+    }
+
+    .container-4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .image-container h1 {
+        font-size: 19px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3em;
+    }
+
+    .slash {
+        display: none;
+    }
+
+    .footer-logo img {
+        margin: 0 auto;
+        display: flex;
+        max-width: 75%;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 2em;
+        background-color: #a06b59;
+    }
+
+    .footer-section {
+        grid-column: span 1;
+        display: flex;
+        grid-column: span 1;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0 auto;
+    }
+
+    .footer h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    .footer ul li {
+        margin: 0 auto;
+    }
+
+    .payment-logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .room-description {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .image-caption button {
+        width: 50%;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .navbar-links {
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .container h1 {
+        font-size: 50px;
+    }
+
+    .container p {
+        font-size: 15px;
+    }
+
+    .reservation-form {
+        gap: 10px;
+    }
+
+    .circle-button {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .image-wrapper p {
+        font-size: 16px;
+    }
+
+    .container2 h1 {
+        font-size: 50px;
+    }
+
+    .grid-container {
+        gap: 9px;
+    }
+
+    .h2.number {
+        font-size: 3em;
+    }
+
+    .slash {
+        display: flex;
+        flex-direction: row;
+        font-size: 9em;
+        margin: auto;
+        color: #926c5ed2;
+    }
+
+    .image-grid-1 {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .image-container h1 {
+        font-size: 25px;
+    }
+
+    .room-description {
+        width: 75%;
+        font-size: 18px;
+    }
+
+    button {
+        width: 23%;
+        font-size: 12px;
+    }
+
+    .container3 h1 {
+        font-size: 40px;
+    }
+
+    .container3 p {
+        font-size: 16px;
+        width: 70%;
+    }
+
+    .contact-us {
+        grid-template-columns: 2fr 2fr 2fr;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .email.box {
+        height: 380px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        align-content: center;
+        justify-content: center;
+        border: none;
+    }
+
+    .container-4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .navbar-links {
+        gap: 25px;
+        font-size: 20px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .container h1 {
+        font-size: 60px;
+    }
+
+    .container p {
+        font-size: 17px;
+    }
+
+    .reservation-form {
+        gap: 15px;
+    }
+
+    .circle-button {
+        width: 90px;
+        height: 90px;
+        font-size: 16px;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .image-wrapper p {
+        font-size: 18px;
+    }
+
+    .container2 h1 {
+        font-size: 60px;
+    }
+
+    .grid-container {
+        gap: 15px;
+    }
+
+    .slash {
+        display: flex;
+        flex-direction: row;
+        font-size: 11em;
+        margin: auto;
+        color: #926c5ed2;
+    }
+
+    .h2.number {
+        font-size: 3.5em;
+    }
+
+    .image-container img {
+        width: 95%;
+    }
+
+    .image-grid-1 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .image-container h1 {
+        font-size: 40px;
+    }
+
+    .room-description {
+        width: 80%;
+        font-size: 20px;
+    }
+
+    button {
+        width: 20%;
+        font-size: 14px;
+    }
+
+    .container3 h1 {
+        font-size: 45px;
+    }
+
+    .container3 p {
+        font-size: 18px;
+        width: 75%;
+    }
+
+    .contact-us {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 35px;
+    }
+
+    .contact-us {
+        grid-template-columns: 2fr 2fr 2fr;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .contact-1 h2 {
+        font-size: 17px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .email.box {
+        height: 380px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        align-content: center;
+        justify-content: center;
+        border: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar-links {
+        gap: 30px;
+        font-size: 22px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .container h1 {
+        font-size: 65px;
+    }
+
+    .container p {
+        font-size: 18px;
+    }
+
+    .circle-button {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .image-container img {
+        width: 95%;
+    }
+
+    .image-container h1 {
+        font-size: 29px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .room-description {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 23px;
+    }
+
+    .email.box {
+        height: 380px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        align-content: center;
+        justify-content: center;
+        border: none;
+    }
+}

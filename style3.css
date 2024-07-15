@@ -10,8 +10,12 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
 .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
@@ -24,6 +28,15 @@ body {
     margin-bottom: 10px;
 }
 
+.ham-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.ham-icon input[type="checkbox"] {
+    appearance: none;
+}
 .hotel-name {
     font-size: 34px;
     color: black;
@@ -220,5 +233,303 @@ p{
     margin: auto;
     vertical-align: middle;
 }
+@media screen and (min-width: 300px) and (max-width: 575px) {
+
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px 28px 10px 10px;
+        justify-content: space-between;
 
 
+    }
+
+    .navbar-center {
+        order: 1;
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .ham-icon {
+        display: block;
+        order: 2;
+    }
+    i.fa-solid.fa-x {
+        display: none;
+    }
+
+    .fa-x,
+    .fa-bars {
+        color: black;
+        font-size: 1.7rem;
+    }
+    .navbar:has(input[type="checkbox"]:checked) .navbar-links {
+        margin-top: 1rem;
+        height: 300px;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+
+
+    .hotel-name {
+        font-size: 28px;
+    }
+
+    .hotel-subtitle {
+        font-size: 20px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 18px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 2em;
+    }
+    .footer-section {
+        grid-column: span 1;
+        display: flex;
+        grid-column: span 1;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer h3 {
+        font-size: 22px;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        font-size: 18px;
+    }
+    .footer-logo img {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .footer-bottom {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: #000526;
+    }
+    .payment-logos {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 10px;
+    }
+
+    .parallax-linear h1 {
+        font-size: 80px;
+    }
+
+    .parallax-1,
+    .parallax-2,
+    .parallax-3,
+    .parallax-4,
+    .parallax-5,
+    .parallax-6 {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+   
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .hotel-name {
+        font-size: 30px;
+    }
+
+    .hotel-subtitle {
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .footer h3 {
+        font-size: 24px;
+    }
+
+    .footer ul {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 28px;
+        margin: 0 20px;
+    }
+
+    .parallax-linear h1 {
+        font-size: 100px;
+    }
+
+    .parallax-1,
+    .parallax-2,
+    .parallax-3,
+    .parallax-4,
+    .parallax-5,
+    .parallax-6 {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .hotel-name {
+        font-size: 32px;
+    }
+
+    .hotel-subtitle {
+        font-size: 24px;
+    }
+
+    .navbar-links {
+        gap: 30px;
+        font-size: 22px;
+    }
+
+    .footer h3 {
+        font-size: 26px;
+    }
+
+    .footer ul {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 32px;
+        margin: 0 30px;
+    }
+
+    .parallax-linear h1 {
+        font-size: 120px;
+    }
+
+    .parallax-1,
+    .parallax-2,
+    .parallax-3,
+    .parallax-4,
+    .parallax-5,
+    .parallax-6 {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .hotel-name {
+        font-size: 34px;
+    }
+
+    .hotel-subtitle {
+        font-size: 26px;
+    }
+
+    .navbar-links {
+        gap: 40px;
+        font-size: 24px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .footer h3 {
+        font-size: 28px;
+    }
+
+    .footer ul {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 25px;
+        line-height: 36px;
+        margin: 0 40px;
+    }
+
+    .parallax-linear h1 {
+        font-size: 140px;
+    }
+
+    .parallax-1,
+    .parallax-2,
+    .parallax-3,
+    .parallax-4,
+    .parallax-5,
+    .parallax-6 {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}

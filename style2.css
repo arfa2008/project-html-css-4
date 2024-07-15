@@ -1,17 +1,21 @@
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-body {
-    background-color: #dee5d8;
-    font-family: "Forum", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.navbar {
+ body {
+     background-color: #dee5d8;
+     font-family: "Forum", serif;
+     font-weight: 400;
+     font-style: normal;
+ }
+ .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
@@ -24,253 +28,808 @@ body {
     margin-bottom: 10px;
 }
 
-.hotel-name {
-    font-size: 34px;
-    color: black;
-    letter-spacing: 8px;
+.ham-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
 }
 
-.hotel-subtitle {
-    font-size: 25px;
-    color: black;
+.ham-icon input[type="checkbox"] {
+    appearance: none;
 }
+ .hotel-name {
+     font-size: 34px;
+     color: black;
+     letter-spacing: 8px;
+ }
 
-.navbar-links {
-    list-style: none;
-    padding: 10px;
-    display: flex;
-    gap: 40px;
-    font-size: 20px;
-}
+ .hotel-subtitle {
+     font-size: 25px;
+     color: black;
+ }
 
-.navbar-links li {
-    display: inline;
-}
+ .navbar-links {
+     list-style: none;
+     padding: 10px;
+     display: flex;
+     gap: 40px;
+     font-size: 20px;
+ }
 
-.navbar-links a {
-    color: black;
-}
+ .navbar-links li {
+     display: inline;
+ }
 
-.navbar-links a {
-    color: black;
-    text-decoration: none;
-    padding: 0px 2px;
-}
+ .navbar-links a {
+     color: black;
+ }
 
-.navbar-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: black;
-    transition: width .3s;
-}
+ .navbar-links a {
+     color: black;
+     text-decoration: none;
+     padding: 0px 2px;
+ }
 
-.navbar-links a:hover::after {
-    width: 100%;
-    transition: width .3s;
-}
-.container {
-    display: grid;
-    grid-template-columns: 1fr 430px;
-    gap: 20px;
-    padding: 20px;
-}
+ .navbar-links a::after {
+     content: '';
+     display: block;
+     width: 0;
+     height: 1px;
+     background: black;
+     transition: width .3s;
+ }
 
-.room-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.room-list h1 {
-    padding-left: 2.7em;
-    font-size: 40px;
-    font-weight: 100;
-}
-.room-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    justify-content: center;
-}
+ .navbar-links a:hover::after {
+     width: 100%;
+     transition: width .3s;
+ }
 
-.room-item img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-}
-.room-item h1 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-.room-item button {
-    color: black;
-    border: 1px solid #082764;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: 20%;
-    height: 45px;
-    background: border-box;
-}
-.room-item button:hover{
-    background-color: #1a2142;
-    color: white;
-}
-.reservation-box {
-    position: fixed;
-    right: 4em;
-    top: 12em;   
-    width: 300px;
-    background-color: #dee5d8;
-    width: 25%;
-    padding: 20px;
-    border: 1px solid #082764;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: -999;
-}
-.reservation-box h2 {
-    text-align: center;
-    font-size: 29px;
-    font-weight: 100;
-    color: #082764;
-}
+ .container {
+     display: grid;
+     grid-template-columns: 1fr 430px;
+     gap: 20px;
+     padding: 20px;
+ }
 
-.reservation-box label {
-    display: block;
-    margin: 10px 0 5px;
-}
+ .room-list {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
 
-.reservation-box input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #082764;
-    border-radius: 4px;
+ .room-list h1 {
+     padding-left: 2.7em;
+     font-size: 40px;
+     font-weight: 100;
+ }
+ .room-list h1 {
+    font-size: 30px;
+    padding-left: 0;
+    text-align: left;
+    padding-left: 19px;
 }
-.reservation-box button {
-    width: 45%;
-    padding: 10px;
-    background: #082764;
-    color: white;
-    border: 1px solid darkblue;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: bold;
-}
-.reservation-box button:hover{
-    background-color: #000526;
-    color: white;
-}
-.content {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding-top: 20px;
-    gap: 15px;
-}
-.content h2 {
-    font-size: 15px;
-    font-weight: 100;
-}
-.content h3{
-    font-size: 25px;
-    font-weight: 100;
-}
-.content p{
-    font-size: 15px;
-    font-weight: lighter;
-    color: #555
-} 
-.carsten {
-    background-color: #000526;
-    height: 35px;
-}
+ .room-item {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px;
+     justify-content: center;
+ }
 
-.carsten p {
-    text-align: center;
-    color: white;
-    font-size: 19px;
-    padding: 5px;
-}
+ .room-item img {
+     max-width: 80%;
+     height: auto;
+     border-radius: 8px;
+ }
 
-.footer {
-    background-color: #1a2142;
-    color: white;
-}
+ .room-item h1 {
+     font-size: 1.5em;
+     margin: 10px 0;
+ }
 
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6em 0em;
-}
+ .room-item button {
+     color: black;
+     border: 1px solid #082764;
+     padding: 10px 20px;
+     cursor: pointer;
+     width: 20%;
+     height: 45px;
+     background: border-box;
+ }
 
-.footer h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
+ .room-item button:hover {
+     background-color: #1a2142;
+     color: white;
+ }
 
+ .reservation-box {
+     position: fixed;
+     right: 4em;
+     top: 12em;
+     width: 300px;
+     background-color: #dee5d8;
+     width: 25%;
+     padding: 20px;
+     border: 1px solid #082764;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
 
-.footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 18px;
-}
+ .reservation-box h2 {
+     text-align: center;
+     font-size: 29px;
+     font-weight: 100;
+     color: #082764;
+ }
 
-.footer ul li {
-    margin-bottom: 10px;
-}
+ .reservation-box label {
+     display: block;
+     margin: 10px 0 5px;
+ }
 
-.footer ul li a {
-    color: #989daf;
-    text-decoration: none;
-}
+ .reservation-box input {
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #082764;
+     border-radius: 4px;
+ }
 
-.footer ul li a:hover {
-    text-decoration: underline;
-}
+ .reservation-box button {
+     width: 45%;
+     padding: 10px;
+     background: #082764;
+     color: white;
+     border: 1px solid darkblue;
+     cursor: pointer;
+     font-size: 12px;
+     font-weight: bold;
+ }
 
-.footer-section {
-    grid-column: span 1;
-    display: flex;
-    grid-column: span 1;
-    flex-direction: column;
-    gap: 15px;
-}
+ .reservation-box button:hover {
+     background-color: #000526;
+     color: white;
+ }
 
-.footer-bottom {
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2em;
-    background-color:#000526;
-}
-.footer-bottom p {
-    color: white;
-}
-.footer-logo {
-    grid-column: span 1;
-    margin: auto;
-}
-.payment-logos {
-    display: flex;
-    flex-direction: row;
-}
-.payment-logos img {
-    width: 180px;
-    margin: 0 5px;
-    vertical-align: middle;
-}
+ .content {
+     display: flex;
+     flex-direction: column;
+     width: 80%;
+     padding-top: 20px;
+     gap: 15px;
+ }
+
+ .content h2 {
+     font-size: 15px;
+     font-weight: 100;
+ }
+
+ .content h3 {
+     font-size: 25px;
+     font-weight: 100;
+ }
+
+ .content p {
+     font-size: 15px;
+     font-weight: lighter;
+     color: #555
+ }
+
+ .head {
+     position: relative;
+     z-index: 10;
+ }
+
+ .carsten {
+     background-color: #000526;
+     height: 35px;
+ }
+
+ .carsten p {
+     text-align: center;
+     color: white;
+     font-size: 19px;
+     padding: 5px;
+ }
+
+ .footer {
+     background-color: #1a2142;
+     color: white;
+ }
+
+ .footer-container {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     gap: 20px;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 6em 0em;
+ }
+
+ .footer h3 {
+     font-size: 25px;
+     margin-bottom: 10px;
+     font-weight: 500;
+ }
 
 
+ .footer ul {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     font-size: 18px;
+ }
 
+ .footer ul li {
+     margin-bottom: 10px;
+ }
+
+ .footer ul li a {
+     color: #989daf;
+     text-decoration: none;
+ }
+
+ .footer ul li a:hover {
+     text-decoration: underline;
+ }
+
+ .footer-section {
+     grid-column: span 1;
+     display: flex;
+     grid-column: span 1;
+     flex-direction: column;
+     gap: 15px;
+ }
+
+ .footer-bottom {
+     font-size: 16px;
+     font-weight: 500;
+     color: white;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 2em;
+     background-color: #000526;
+ }
+
+ .footer-bottom p {
+     color: white;
+ }
+
+ .footer-logo {
+     grid-column: span 1;
+     margin: auto;
+ }
+
+ .payment-logos {
+     display: flex;
+     flex-direction: row;
+ }
+
+ .payment-logos img {
+     width: 180px;
+     margin: 0 5px;
+     vertical-align: middle;
+ }
+
+ @media (min-width: 300px) and (max-width: 576px) {
+     .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px 28px 10px 10px;
+        justify-content: space-between;
+
+
+    }
+
+    .navbar-center {
+        order: 1;
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .ham-icon {
+        display: block;
+        order: 2;
+    }
+    i.fa-solid.fa-x {
+        display: none;
+    }
+
+    .fa-x,
+    .fa-bars {
+        color: black;
+        font-size: 1.7rem;
+    }
+    .navbar:has(input[type="checkbox"]:checked) .navbar-links {
+        margin-top: 1rem;
+        height: 300px;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+
+     .container {
+         grid-template-columns: 1fr;
+         padding: 10px;
+     }
+
+     .content {
+         display: flex;
+         flex-direction: column;
+         width: 95%;
+         padding-top: 20px;
+         gap: 15px;
+     }
+
+     .room-list h1 {
+        font-size: 30px;
+        padding-left: 0;
+        text-align: left;
+        padding-left: 19px;
+    }
+
+     .room-item {
+         padding: 10px;
+     }
+
+     .room-item img {
+         max-width: 100%;
+     }
+
+     .room-item button {
+         width: 35%;
+         height: auto;
+     }
+
+     .reservation-box {
+         position: relative;
+         width: 100%;
+         right: auto;
+         top: auto;
+         margin-top: 20px;
+         padding: 10px;
+     }
+
+     .reservation-box h2 {
+         font-size: 24px;
+     }
+
+     .reservation-box input,
+     .reservation-box button {
+         font-size: 16px;
+     }
+
+     .footer-container {
+         grid-template-columns: 1fr;
+         text-align: center;
+     }
+
+     .footer-section {
+         margin-bottom: 20px;
+     }
+
+     .footer-bottom {
+         flex-direction: column;
+         text-align: center;
+         gap: 10px;
+         justify-content: center;
+     }
+
+     .payment-logos {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 10px;
+     }
+     .payment-logos img {
+        width: 180px;
+        margin: 0 5px;
+        vertical-align: middle;
+        margin: 0 auto;
+    }
+ }
+ @media (min-width: 576px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .room-list h1 {
+        font-size: 35px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .room-item {
+        padding: 15px;
+    }
+
+    .room-item img {
+        max-width: 100%;
+    }
+
+    .room-item button {
+        width: 19%;
+        height: auto;
+    }
+
+    .reservation-box {
+        position: relative;
+        width: 100%;
+        right: auto;
+        top: auto;
+        margin-top: 20px;
+        padding: 15px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .reservation-box h2 {
+        font-size: 26px;
+    }
+
+    .reservation-box input,
+    .reservation-box button {
+        font-size: 18px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .payment-logos {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .payment-logos img {
+        width: 180px;
+        margin: 0 5px;
+        vertical-align: middle;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .navbar-links {
+        flex-direction: row;
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: 2fr 1fr;
+        padding: 20px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .room-list h1 {
+        font-size: 36px;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .room-item {
+        padding: 20px;
+    }
+
+    .room-item img {
+        max-width: 100%;
+    }
+
+    .room-item button {
+        width: 25%;
+        height: auto;
+    }
+    .reservation-box {
+        position: fixed;
+        width: 37%;
+        right: 2px;
+        top: auto;
+        margin-top: 0;
+        padding: 20px;
+        height: 435px;
+    }
+    .reservation-box h2 {
+        font-size: 28px;
+    }
+    .reservation-box button {
+        width: 66%;
+        padding: 10px;
+        background: #082764;
+        color: white;
+        border: 1px solid darkblue;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .payment-logos {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+
+
+    .navbar-links {
+        flex-direction: row;
+        gap: 25px;
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: 2fr 1fr;
+        padding: 30px;
+    }
+
+    .room-list h1 {
+        font-size: 38px;
+        padding-left: 15px;
+        text-align: left;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .room-item {
+        padding: 20px;
+    }
+
+    .room-item img {
+        max-width: 100%;
+    }
+
+    .room-item button {
+        width: 30%;
+        height: auto;
+    }
+
+    .reservation-box {
+        position: fixed;
+        width: 35%;
+        right: 10px;
+        top: auto;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .reservation-box h2 {
+        font-size: 30px;
+    }
+
+    .reservation-box button {
+        font-size: 13px;
+    }
+
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .payment-logos {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 1230px) and (max-width: 1500px) {
+    .navbar {
+        padding: 30px 50px;
+    }
+
+    .navbar-links {
+        gap: 30px;
+        font-size: 22px;
+    }
+
+    .room-list h1 {
+        padding-left: 37px;
+        font-size: 40px;
+        font-weight: 100;
+    }
+
+    .room-item {
+        padding: 25px;
+    }
+
+    .room-item img {
+        max-width: 100%;
+    }
+
+    .room-item button {
+        width: 20%;
+        height: auto;
+    }
+
+    .reservation-box {
+        padding: 30px;
+    }
+
+    .reservation-box h2 {
+        font-size: 32px;
+    }
+    .reservation-box {
+        position: fixed;
+        right: 1em;
+        top: 12em;
+        background-color: #dee5d8;
+        width: 34%;
+        padding: 20px;
+        border: 1px solid #082764;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 99%;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .reservation-box button {
+        width: 45%;
+        padding: 10px;
+        background: #082764;
+        color: white;
+        border: 1px solid darkblue;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        height: 500px;
+        margin: 0 auto;
+        padding: 6em 0em;
+    }
+}
+@media (min-width: 1600px) and (max-width: 1900px) {
+    .navbar {
+        padding: 30px 50px;
+    }
+
+    .navbar-links {
+        gap: 30px;
+        font-size: 22px;
+    }
+
+    .room-list h1 {
+        padding-left: 3.7em;
+        font-size: 60px;
+        font-weight: 100;
+    }
+
+    .room-item {
+        padding: 25px;
+    }
+
+    .room-item img {
+        max-width: 70%;
+    }
+
+    .room-item button {
+        width: 20%;
+        height: auto;
+        font-size: 22px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 69%;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .content h2 {
+        font-size: 38px;
+        font-weight: 100;
+    }
+    .content h3 {
+        font-size: 42px;
+        font-weight: 100;
+    }
+    .content p {
+        font-size: 26px;
+        font-weight: lighter;
+        color: #555;
+    }
+    .reservation-box {
+        padding: 30px;
+        font-size: 24px;
+    }
+
+    .reservation-box h2 {
+        font-size: 32px;
+    }
+
+    .reservation-box button {
+        width: 53%;
+        padding: 10px;
+        background: #082764;
+        color: white;
+        border: 1px solid darkblue;
+        cursor: pointer;
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .footer-section {
+        margin-bottom: 25px;
+    }
+
+    .footer-bottom {
+        padding: 30px 50px;
+    }
+}

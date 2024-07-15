@@ -12,6 +12,11 @@ body {
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
@@ -24,6 +29,15 @@ body {
     margin-bottom: 10px;
 }
 
+.ham-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.ham-icon input[type="checkbox"] {
+    appearance: none;
+}
 .hotel-name {
     font-size: 34px;
     color: black;
@@ -269,5 +283,189 @@ body {
     vertical-align: middle;
 }
 
+@media screen and (min-width: 300px) and (max-width: 575px) {
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px 28px 10px 10px;
+        justify-content: space-between;
 
+
+    }
+
+    .navbar-center {
+        order: 1;
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .ham-icon {
+        display: block;
+        order: 2;
+    }
+    i.fa-solid.fa-x {
+        display: none;
+    }
+
+    .fa-x,
+    .fa-bars {
+        color: black;
+        font-size: 1.7rem;
+    }
+    .navbar:has(input[type="checkbox"]:checked) .navbar-links {
+        margin-top: 1rem;
+        height: 300px;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    .navbar:has(input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+    .container {
+        grid-template-columns: 1fr; 
+        gap: 2em; 
+    }
+
+    .check-availability h1 {
+        font-size: 30px; 
+    }
+
+    .hero-image {
+        max-width: 100%; 
+    }
+
+    .contact-form-1 button {
+        width: 100%; 
+    }
+    .contact-form-1 textarea {
+        height: 101px;
+    }
+    .footer-container {
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2em 0em;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-logo img {
+        max-width: 75%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .footer-bottom p {
+        color: white;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    .footer h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+    .footer ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    .footer ul li {
+        margin: 0 auto;
+    }
+    .payment-logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 10px;
+    }
+    .footer-bottom {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2em;
+        gap: 10px;
+        background-color: #000526;
+    }
+}
+
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 4em; 
+    }
+
+    .check-availability h1 {
+        font-size: 35px; 
+    }
+
+    .hero-image {
+        max-width: 95%; 
+    }
+
+    .contact-form-1 button {
+        width: 50%; 
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 4em; 
+    }
+
+    .check-availability h1 {
+        font-size: 36px; 
+    }
+
+    .hero-image {
+        max-width: 96%;
+    }
+
+    .contact-form-1 button {
+        width: 40%; 
+     }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 4em; 
+    }
+
+    .check-availability h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .contact-form-1 button {
+        width: 30%;
+    }
+}
 
