@@ -144,7 +144,7 @@
 
  .reservation-box {
      position: fixed;
-     right: 4em;
+     right: 0em;
      top: 12em;
      width: 300px;
      background-color: #dee5d8;
