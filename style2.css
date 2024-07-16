@@ -655,7 +655,7 @@
     .reservation-box {
         position: fixed;
         width: 35%;
-        right: 10px;
+        right: 4px;
         top: auto;
         margin-top: 0;
         padding: 20px;
@@ -722,7 +722,7 @@
     }
     .reservation-box {
         position: fixed;
-        right: 1em;
+        right: 0em;
         top: 12em;
         background-color: #dee5d8;
         width: 34%;
