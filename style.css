@@ -104,7 +104,6 @@ body {
     gap: 5px;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 5s forwards;
 }
 
 .container h1 {
@@ -112,12 +111,6 @@ body {
     font-size: 80px;
     font-weight: lighter;
     letter-spacing: 2px;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
 }
 
 .container p {
