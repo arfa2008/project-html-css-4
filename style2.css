@@ -144,11 +144,11 @@
 
  .reservation-box {
      position: fixed;
-     right: 0em;
+     right: 1em;
      top: 12em;
      width: 300px;
      background-color: #dee5d8;
-     width: 25%;
+     width: 28%;
      padding: 20px;
      border: 1px solid #082764;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -582,8 +582,8 @@
     }
     .reservation-box {
         position: fixed;
-        width: 37%;
-        right: 2px;
+        width: 35%;
+        right: 1em;
         top: auto;
         margin-top: 0;
         padding: 20px;
@@ -725,10 +725,10 @@
     }
     .reservation-box {
         position: fixed;
-        right: 0em;
+        right: 1em;
         top: 12em;
         background-color: #dee5d8;
-        width: 34%;
+        width: 28%;
         padding: 20px;
         border: 1px solid #082764;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -741,7 +741,7 @@
         gap: 15px;
     }
     .reservation-box button {
-        width: 45%;
+        width: 50%;
         padding: 10px;
         background: #082764;
         color: white;
