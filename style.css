@@ -370,9 +370,6 @@ button {
     width: 25%;
     text-align: center;
 }
-input:focus {
-    outline: none;
-}
 .underline-transition {
     position: relative;
     display: inline-block;
