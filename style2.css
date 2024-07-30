@@ -726,7 +726,7 @@
     .reservation-box {
         position: fixed;
         right: 1em;
-        top: 12em;
+        top: 9em;
         width: 28%;
         padding: 20px;
         border: 1px solid #082764;
@@ -746,7 +746,7 @@
         color: white;
         border: 1px solid darkblue;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 10px;
         font-weight: bold;
     }
     .footer-container {
