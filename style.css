@@ -831,7 +831,8 @@ button {
     }
 
     .container p {
-        font-size: 14px;
+        font-size: 16px;
+        text-align: center;
     }
 
     .reservation-form {
@@ -951,7 +952,14 @@ button {
     .image-container h1 {
         font-size: 19px;
     }
-
+    
+    h2.number {
+        color: #c9a496;
+        font-size: 5em;
+        margin: 0 auto;
+        font-weight: 300;
+        padding-right: 5px;
+    }
     .footer-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
